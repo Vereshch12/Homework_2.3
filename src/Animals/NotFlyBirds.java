@@ -3,7 +3,7 @@ package Animals;
 import java.util.Objects;
 
 public final class NotFlyBirds extends Birds{
-    private final String movementType = "ходят";
+    private final String MOVEMENT_TYPE = "ходят";
 
     public NotFlyBirds(String nickname, Integer age, String livingEnvironment) {
         super(nickname, age, livingEnvironment);
@@ -29,16 +29,16 @@ public final class NotFlyBirds extends Birds{
         if (o == null || getClass() != o.getClass()) return false;
         if (!super.equals(o)) return false;
         NotFlyBirds that = (NotFlyBirds) o;
-        return Objects.equals(movementType, that.movementType);
+        return Objects.equals(MOVEMENT_TYPE, that.MOVEMENT_TYPE);
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(super.hashCode(), movementType);
+        return Objects.hash(super.hashCode(), MOVEMENT_TYPE);
     }
 
     @Override
     public String toString() {
-        return super.toString() + "\nТип перемещения: " + movementType;
+        return super.toString() + "\nТип перемещения: " + MOVEMENT_TYPE;
     }
 }
